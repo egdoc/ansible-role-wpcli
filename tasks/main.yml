@@ -1,0 +1,13 @@
+---
+- name: Ensure wp-cli installation directory exists
+  ansible.builtin.file:
+    path: '{{ wpcli_install_dir }}'
+    state: directory
+    mode: '0755'
+
+- name: Ensure wp-cli is installed
+  ansible.builtin.get_url:
+    url: '{{ wpcli_repo_url }}/releases/download/v{{ wpcli_version }}/wp-cli-{{ wpcli_version }}.phar'
+    dest: '{{ wpcli_install_dir }}/wp'
+    checksum: sha256:{{ wpcli_repo_url }}/releases/download/v{{ wpcli_version }}/wp-cli-{{ wpcli_version }}.phar.sha256
+    mode: '0755'

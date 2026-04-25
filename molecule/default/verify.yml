@@ -1,0 +1,13 @@
+---
+- name: Verify
+  hosts: all
+  tasks:
+    - name: Check wpcli version
+      ansible.builtin.command:
+        cmd: /usr/local/bin/wp cli version
+      changed_when: false
+      register: wp_cli_version
+
+    - name: Verify wpcli version
+      ansible.builtin.assert:
+        that: '"2.12.0" in wp_cli_version.stdout'

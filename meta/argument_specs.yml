@@ -1,0 +1,13 @@
+---
+argument_specs:
+  main:
+    options:
+      wpcli_version:
+        type: str
+        default: 2.12.0
+      wpcli_installation_dir:
+        type: str
+        default: /usr/local/bin
+      wpcli_repo_url:
+        type: str
+        default: https://github.com/wp-cli/wp-cli

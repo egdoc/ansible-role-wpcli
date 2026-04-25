@@ -1,0 +1,8 @@
+---
+- name: Prepare
+  hosts: all
+  tasks:
+    - name: Ensure php-cli is installed
+      ansible.builtin.package:
+        name: php-cli
+        state: present

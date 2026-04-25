@@ -1,0 +1,13 @@
+---
+galaxy_info:
+  author: Egidio Docile
+  namespace: egdoc
+  role_name: wpcli
+  description: Ansible role to install the wp-cli utility on Linux
+  license: GPL-2.0-or-later
+  min_ansible_version: '2.2'
+  galaxy_tags:
+    - wpcli
+    - wordpress
+
+dependencies: []
