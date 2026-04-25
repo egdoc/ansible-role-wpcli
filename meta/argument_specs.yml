@@ -5,6 +5,9 @@ argument_specs:
       wpcli_version:
         type: str
         default: 2.12.0
+      wpcli_checksum:
+        type: str
+        default: ce34ddd838f7351d6759068d09793f26755463b4a4610a5a5c0a97b68220d85c
       wpcli_installation_dir:
         type: str
         default: /usr/local/bin
